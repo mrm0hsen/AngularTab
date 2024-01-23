@@ -1,0 +1,41 @@
+::ng-deep .form {
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  ::ng-deep #progress-button {
+    margin-bottom: 20px;
+  }
+  
+  ::ng-deep #progress-bar-status {
+    display: inline-block;
+    padding-top: 8px;
+  }
+  
+  ::ng-deep .complete .dx-progressbar-range {
+    background-color: green;
+  }
+
+  .stepContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: rtl;
+    height: 1rem;
+  }
+
+  .stepItem {
+    padding: 5px;
+    border: 1px solid black;
+    z-index: 20;
+    background-color: white;
+  }
+
+  .stepStripe {
+    background-color: black;
+    z-index: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 27px;
+    margin-right: 27px;
+  }

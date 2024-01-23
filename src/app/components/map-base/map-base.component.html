@@ -1,0 +1,14 @@
+<dx-map
+  #map
+  center="{{center.latitude}}, {{center.longitude}}"
+  [zoom]="14"
+  [height]="400"
+  width="100%"
+  provider="bing"
+  [apiKey]="apiKey"
+  [type]="mapTypes[0].key"
+  (onClick)="addMarker($event)"
+  [markers]="mapMarkers"
+  [autoAdjust]="false"
+>
+</dx-map>

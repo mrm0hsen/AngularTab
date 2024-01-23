@@ -1,7 +1,9 @@
-import {ComponentFactory} from "@angular/core";
+
+import { LoginComponent } from "../components/login/login.component";
 
 export class TabObject {
   public domContent: any;
-constructor(public TabTitle:string,public Content:any) {}
+constructor(public TabTitle:string,public Content:any) {
+}
 
 }

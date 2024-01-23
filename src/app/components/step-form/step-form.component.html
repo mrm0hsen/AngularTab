@@ -1,0 +1,65 @@
+
+<div class="container">
+    <div class="d-flex m-3">
+        <button class="flex-fill" 
+            *ngFor="let step of stepTabs; let i = index" 
+            [ngStyle]="{'backgroundColor': step.tabValid ? 'grey' : 'red'}" 
+            (click)="stepButtonClicked(i)">
+            {{ step.name }}
+        </button>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <form [formGroup]="stepForm" (ngSubmit)="onSubmit(stepForm.value)">
+                <section [hidden]="stepIndex !== 0">
+                    <div class="row">
+                        <div class="col-xs-6 m-2">
+                            <label>Name</label>
+                            <input type="text" formControlName="name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 m-2">
+                            <label>Adress</label>
+                            <input type="text" formControlName="adress">
+                        </div>
+        
+                        <div class="col-xs-6 m-2">
+                            <label>Phone</label>
+                            <input type="text" formControlName="phone">
+                        </div>
+                    </div>
+                </section>
+                <section [hidden]="stepIndex !== 1">
+                    <div class="row">
+                        <div class="col-xs-6 m-2">
+                            <label>Personel Number</label>
+                            <input type="text" formControlName="workNumber">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 m-2">
+                            <label>Work Adress</label>
+                            <input type="text" formControlName="workAdress">
+                        </div>
+        
+                        <div class="col-xs-6 m-2">
+                            <label>Work Phone</label>
+                            <input type="text" formControlName="workPhone">
+                        </div>
+                    </div>
+                </section>
+                <section [hidden]="stepIndex !== 2">
+                    <div class="row">
+                        <div class="col-xs-6 m-2">
+                            <label>Emergency Number</label>
+                            <input type="text" formControlName="emergencyNumber">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </section>
+            </form>
+            
+        </div>
+    </div>
+</div>

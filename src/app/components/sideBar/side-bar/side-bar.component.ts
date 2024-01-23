@@ -1,7 +1,6 @@
 import {Component, ComponentFactoryResolver, ViewContainerRef} from '@angular/core';
 import {TabServiceService} from "../../../Services/tab-service.service";
 import {TabObject} from "../../../Interfaces/tab-object";
-import {LoginComponent} from "../../login/login.component";
 
 @Component({
   selector: 'app-side-bar',

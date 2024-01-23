@@ -18,5 +18,28 @@
     </div>
   </div>
 </div>
+<div class="row">
+  <div class="col-md-4">
+
+  </div>
+  <div class="col-md-4">
+    <dx-date-box></dx-date-box>
+    
+  </div>
+
+</div>
+
+
+<app-map-base [center]="centerLocation" (selectedLocation)="onLocationChange($event)"></app-map-base>
+
+<!-- <app-progress-bar></app-progress-bar> -->
+
+<!-- <app-step-form></app-step-form> -->
+
+<app-form-test></app-form-test>
+
+<!-- <app-single-dropdown></app-single-dropdown> -->
+
+<!-- <app-multiple-dropdown></app-multiple-dropdown> -->
 
 <router-outlet></router-outlet>

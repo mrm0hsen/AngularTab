@@ -1,0 +1,26 @@
+
+<div class="container">
+    
+    <div class="topBar">
+        <div class="col-2" style="align-self: center;">
+            <button class="btn btn-primary" (click)="IncrementStepIndex()" [hidden]="stepIndex === stepTabs.length - 1" style="margin-left: 10px;width:100px;">Next</button>
+        </div>
+        <div class="col-8">
+            <div class="stepper-wrapper">
+                <div class="stepper-item" [ngClass]="{' completed' : (i < stepIndex), ' active' : (i === stepIndex)}"  *ngFor="let step of stepTabs; let i = index">
+                    <div class="step-counter">{{i + 1}}</div>
+                    <div class="step-name">{{step.name}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-2" style="align-self: center;">
+            <button class="btn btn-primary" (click)="DecrementStepIndex()" [hidden]="stepIndex === 0" style="margin-right: 10px;width:100px">Previous</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 content">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

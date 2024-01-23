@@ -1,0 +1,39 @@
+<div class="form">
+    <dx-button
+      id="progress-button"
+      [(text)]="buttonText"
+      (onClick)="onButtonClick()"
+      [width]="200"
+    >
+    </dx-button>
+    <div class="progress-info"> Time left {{ seconds | time }} </div>
+    <dx-progress-bar
+      #progressBar
+      id="progress-bar-status"
+      width="90%"
+      [elementAttr]="{ 'aria-label': 'Progress Bar' }"
+      [class.complete]="progressBar.value == maxValue"
+      [min]="0"
+      [max]="maxValue"
+      [statusFormat]="format"
+      [value]="maxValue - seconds"
+    >
+    
+    </dx-progress-bar>
+    <div class="stepStripe">
+        <div class="stepContainer">
+        
+            <div class="stepItem" *ngFor="let step of steps">{{step.stepName}}</div>
+        </div>
+    </div>
+
+    <!-- <div class="d-flex flex-row">  
+        <div class="d-flex justify-content-start space-between" *ngFor="let step of steps">{{step.stepName}}</div>   
+      </div> 
+    <div class="row">
+        <div *ngFor="let step of steps" style="width: 10%;display: inline-block; text-align: center">
+            <p>{{ step.stepName }}</p>
+        </div>
+
+    </div> -->
+  </div>

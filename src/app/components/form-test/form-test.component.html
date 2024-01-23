@@ -1,0 +1,60 @@
+<app-step-form-base [stepTabs]="stepTabs" (stepIndex)="stepIndex" (selectedTab)="onTabChange($event)">
+    <form [formGroup]="stepForm" (ngSubmit)="onSubmit(stepForm.value)">
+        <section [hidden]="selectedTab !== 0">
+            <div class="row">
+                <div class="col-xs-6 m-2">
+                    <label>Name</label>
+                    <input type="text" formControlName="name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 m-2">
+                    <label>Adress</label>
+                    <input type="text" formControlName="adress">
+                </div>
+
+                <div class="col-xs-6 m-2">
+                    <label>Phone</label>
+                    <input type="text" formControlName="phone">
+                </div>
+            </div>
+        </section>
+        <section [hidden]="selectedTab !== 1">
+            <div class="row">
+                <div class="col-xs-6 m-2">
+                    <label>Personel Number</label>
+                    <input type="text" formControlName="workNumber">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 m-2">
+                    <label>Work Adress</label>
+                    <input type="text" formControlName="workAdress">
+                </div>
+
+                <div class="col-xs-6 m-2">
+                    <label>Work Phone</label>
+                    <input type="text" formControlName="workPhone">
+                </div>
+            </div>
+        </section>
+        <section [hidden]="selectedTab !== 2">
+            <div class="row">
+                <div class="col-xs-6 m-2">
+                    <label>Emergency Number</label>
+                    <input type="text" formControlName="emergencyNumber">
+                </div>
+            </div>
+        </section>
+        <section [hidden]="selectedTab !== 3">
+            <div class="row">
+                <div class="col-xs-6 m-2">
+                    <label>Emergency Number</label>
+                    <input type="text" formControlName="emergencyNumber2">
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </section>
+        
+    </form>
+</app-step-form-base>
